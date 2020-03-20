@@ -32,6 +32,9 @@
                 border: 1px solid $black-color;
                 padding: .8rem .5rem;
                 font-size: 1.6rem;
+            }
+
+            #email::placeholder {
                 color: $white-color;
             }
 
