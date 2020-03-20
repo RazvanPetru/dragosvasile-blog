@@ -1,0 +1,30 @@
+.post {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 10rem;
+
+    &__container {
+        text-align: center;
+
+        &-date {
+            font-size: 1.4rem;
+            font-family: $second-montserrat;
+        }
+
+        &-title {
+            font-size: 4.5rem;
+            padding-top: 2rem;
+            font-family: $playfair;
+            color: $green-color;
+        }
+
+        &-description {
+            padding-top: 3rem;
+            text-align: start;
+            line-height: 3.2rem;
+            font-size: 1.4rem;
+        }
+    }
+}

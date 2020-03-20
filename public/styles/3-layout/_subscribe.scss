@@ -38,6 +38,10 @@
                 color: $white-color;
             }
 
+            #email:-moz-placeholder {
+                color: $white-color;
+            }
+
             #button {
                 background-color: transparent;
                 border: 1px solid $black-color;

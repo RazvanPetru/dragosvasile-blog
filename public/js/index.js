@@ -12,4 +12,12 @@ hamburger.addEventListener('click', () => {
     social.classList.toggle('open-social');
 })
 
+for (let i = 0; i < items.length; i++) {
+    items[i].addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('is-active');
+    });
+}
+
+
 const date = document.getElementById('date').innerHTML = d.getFullYear();
