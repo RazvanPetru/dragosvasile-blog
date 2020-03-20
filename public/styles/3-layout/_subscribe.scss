@@ -1,0 +1,47 @@
+.subscribe {
+    background-color: $green-color;
+    height: 50vh;
+    margin-top: 10rem;
+
+    &__container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &-title {
+            font-size: 2.4rem;
+            font-family: $playfair;
+            letter-spacing: .1rem;
+            line-height: 6rem;
+        }
+
+        &-description {
+            width: 100%;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        &-signup {
+            padding-top: 2rem;
+
+            #email {
+                background-color: transparent;
+                border: 1px solid $black-color;
+                padding: .8rem .5rem;
+                font-size: 1.6rem;
+                color: $white-color;
+            }
+
+            #button {
+                background-color: transparent;
+                border: 1px solid $black-color;
+                font-size: 1.4rem;
+                padding: .9rem 1rem;
+                color: $white-color;
+            }
+        }
+    }
+}

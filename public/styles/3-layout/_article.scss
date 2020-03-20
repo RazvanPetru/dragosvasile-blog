@@ -1,0 +1,58 @@
+.article {
+    display: inline-grid;
+    grid-template-columns: repeat(auto-fill, 30rem);
+    grid-gap: 10rem;
+    margin-top: 10rem;
+    justify-content: center;
+    width: 100%;
+
+
+    @include breakpoint(medium) {
+        display: inline-grid;
+        grid-template-rows: repeat(auto-fill, auto);
+        grid-template-columns: repeat(auto-fill, auto);
+        grid-gap: 10rem;
+        justify-items: center;
+    }
+
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        padding: 1 0;
+    }
+
+    &__date {
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    &__title {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 3rem;
+        text-align: center;
+        font-family: $playfair;
+        letter-spacing: .2rem;
+        color: $green-color;
+    }
+
+    &__description {
+        text-align: center;
+    }
+
+    &__button {
+        text-align: center;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+
+        #read-more {
+            padding: .2rem .5rem;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid $green-color;
+            color: $green-color;
+            cursor: pointer;
+        }
+    }
+}

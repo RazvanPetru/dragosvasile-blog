@@ -1,0 +1,34 @@
+// COLORS
+
+$black-color: #171a21;
+$brown-color: #d8b3ad;
+$white-color: #fbfdfc;
+$grey-color: #a8a9ac;
+$green-color: #4f8179;
+$kaki-color: #c7d09c;
+
+// FONTS
+
+$first-montserrat: 'Montserrat Alternates',
+sans-serif;
+$second-montserrat: 'Montserrat',
+sans-serif;
+$playfair: 'Playfair Display',
+serif;
+$lobster: 'Lobster Two',
+cursive;
+
+// BREAKPOINTS
+
+$breakpoints: (small: 499px,
+    medium: 899px,
+    large: 999px,
+    extra-large: 1399px);
+
+@mixin breakpoint($size) {
+    $breakpoint-value: map-get($breakpoints, $size);
+
+    @media screen and (min-width: $breakpoint-value) {
+        @content;
+    }
+}
