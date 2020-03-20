@@ -350,6 +350,12 @@ body {
   height: 100%;
 }
 
+.footer__container-social .footer-social {
+  color: #4f8179;
+  font-size: 2rem;
+  padding: 0 1rem;
+}
+
 .footer__container-creator {
   font-size: .5rem;
   font-family: "Montserrat", sans-serif;
