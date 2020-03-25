@@ -1,0 +1,33 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "A simple blog ",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "mongodb": "^3.5.5",
+    "mongoose": "^5.9.5",
+    "node": "^13.10.1",
+    "nodemon": "^2.0.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RazvanPetru/dragosvasile-blog.git"
+  },
+  "author": "Razvan Petru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RazvanPetru/dragosvasile-blog/issues"
+  },
+  "homepage": "https://github.com/RazvanPetru/dragosvasile-blog#readme"
+}

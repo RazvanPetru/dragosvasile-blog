@@ -11,7 +11,7 @@
 
         &-social {
             .footer-social {
-                color: $green-color;
+                color: $grey-white-color;
                 font-size: 2rem;
                 padding: 0 1rem;
             }
@@ -22,9 +22,10 @@
             font-family: $second-montserrat;
             padding-top: 1.5rem;
             padding-bottom: 1rem;
+            color: $grey-white-color;
 
             #name {
-                color: $black-color;
+                color: $cappuccino-color;
             }
         }
     }

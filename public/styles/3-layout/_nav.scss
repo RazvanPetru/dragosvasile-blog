@@ -8,12 +8,12 @@
     }
 
     #logo {
-        padding: 2rem 3rem;
+        padding: 2rem 6rem;
         font-family: $playfair;
 
         a {
             text-decoration: none;
-            color: $green-color;
+            color: $grey-white-color;
         }
 
         @include breakpoint(medium) {
@@ -23,7 +23,7 @@
 
             a {
                 text-decoration: none;
-                color: $green-color;
+                color: $grey-white-color;
             }
         }
     }
@@ -52,26 +52,17 @@
                 max-width: 2.6rem;
                 height: .2rem;
                 border-radius: 2rem;
-                background-color: $black-color;
+                background-color: $cappuccino-color;
                 margin-bottom: .6rem;
                 transition: all .5s ease;
             }
 
-            .line-2 {
-                width: 2rem;
+            &.is-active .line-1 {
+                transform: translateY(.4rem) rotate(-220deg);
             }
 
             &.is-active .line-2 {
-                transform: translateX(1rem);
-                opacity: 0;
-            }
-
-            &.is-active .line-1 {
-                transform: translateY(.8rem) rotate(-35deg);
-            }
-
-            &.is-active .line-3 {
-                transform: translateY(-.8rem) rotate(35deg);
+                transform: translateY(-.4rem) rotate(220deg);
             }
         }
 
@@ -82,7 +73,7 @@
 
     &__icons {
         &-social {
-            color: $black-color;
+            color: $grey-white-color;
             font-size: 2rem;
             padding: 0 1rem;
             opacity: 1;
@@ -103,14 +94,14 @@
         height: 100vh;
         width: 100%;
         list-style: none;
-        background-color: $white-color;
+        background-color: $black-color;
         position: fixed;
-        z-index: -1;
         opacity: 0;
-        transition: all .2s ease-in-out;
+        z-index: -1;
+        transition: all .3s ease-in-out;
 
         a {
-            color: $black-color;
+            color: $grey-white-color;
             text-decoration: none;
             font-size: 1.6rem;
             opacity: 0;
@@ -119,7 +110,12 @@
         }
 
         &.open {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            text-align: center;
             z-index: 1;
+            visibility: visible;
             opacity: 1;
 
             a {
@@ -142,15 +138,17 @@
             transition: none;
             background-color: transparent;
 
+
             a {
                 opacity: 1;
                 padding: 0 1.5rem;
                 transition: none;
-                color: $black-color;
+                color: $grey-color;
             }
         }
 
-        &__icons {
+        &__icons,
+        &-social {
             position: absolute;
             right: 5%;
             transform: translate(-5%);

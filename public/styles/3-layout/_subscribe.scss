@@ -1,6 +1,6 @@
 .subscribe {
     background-color: $green-color;
-    height: 50vh;
+    height: 70vh;
     margin-top: 10rem;
 
     &__container {
@@ -32,6 +32,12 @@
                 border: 1px solid $black-color;
                 padding: .8rem .5rem;
                 font-size: 1.6rem;
+                border-radius: 0;
+                color: $white-color;
+
+                &:focus {
+                    outline: 0;
+                }
             }
 
             #email::placeholder {
@@ -48,6 +54,10 @@
                 font-size: 1.4rem;
                 padding: .9rem 1rem;
                 color: $white-color;
+
+                &:focus {
+                    outline: 0;
+                }
             }
         }
     }
