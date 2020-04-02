@@ -4,6 +4,7 @@ const path = require("path");
 const bodyparser = require("body-parser");
 const ejs = require("ejs");
 const _ = require("lodash");
+const moment = require("moment");
 
 const app = express();
 
@@ -15,13 +16,14 @@ app.use(
 
 app.set("view engine", "ejs");
 
-app.use("/public", express.static(__dirname + '/public'));
+app.use("/public", express.static(__dirname + "/public"));
 
 let posts = [];
 
 app.get("/", (req, res) => {
   res.render("blog", {
-    posts: posts
+    posts: posts,
+    moment: moment
   });
 });
 
@@ -57,7 +59,8 @@ app.get("/posts/:postName", (req, res) => {
     if (storedTitle === requestedTitle) {
       res.render("posts", {
         title: post.title,
-        content: post.content
+        content: post.content,
+        moment: moment
       });
     }
   });

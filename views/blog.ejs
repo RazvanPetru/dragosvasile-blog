@@ -4,7 +4,7 @@
     <% posts.forEach(function(post) {%>
     <div class="article__container">
         <div class="article__date">
-            3/10/20
+            <%= moment().format('MMMM DD YYYY'); %>
         </div>
         <div class="article__title">
             <a href="/posts/<%= post.title %>"><%= post.title%></a>
@@ -19,6 +19,4 @@
     <% }); %>
 </article>
 
-
-<%-include('partials/newsletter') %>
-<%-include('partials/footer') %>
+<%-include('partials/newsletter') %> <%-include('partials/footer') %>

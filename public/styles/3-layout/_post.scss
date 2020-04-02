@@ -1,8 +1,8 @@
 .article {
     display: inline-grid;
     grid-template-columns: repeat(auto-fill, 30rem);
-    grid-gap: 10rem;
     margin-top: 10rem;
+    grid-gap: 10rem;
     justify-content: center;
     min-height: 100%;
     width: 100%;
@@ -12,7 +12,6 @@
         display: inline-grid;
         grid-template-rows: repeat(auto-fill, auto);
         grid-template-columns: repeat(auto-fill, auto);
-        grid-gap: 10rem;
         justify-items: center;
     }
 
@@ -20,8 +19,6 @@
     &__container {
         display: flex;
         flex-direction: column;
-        flex-basis: 1;
-        flex-grow: 0;
         padding: 1rem 0;
     }
 

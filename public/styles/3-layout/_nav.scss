@@ -1,162 +1,165 @@
 .nav {
+  display: flex;
+
+  @include breakpoint(medium) {
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+  }
+
+  #logo {
+    padding: 2rem 6rem;
+    font-family: $playfair;
+
+    a {
+      text-decoration: none;
+      color: $grey-white-color;
+    }
 
     @include breakpoint(medium) {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: start;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+
+      a {
+        text-decoration: none;
+        color: $grey-white-color;
+      }
+    }
+  }
+
+  &__toggle {
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    z-index: 1;
+
+    @include breakpoint(small) {
+      margin-right: 4rem;
     }
 
-    #logo {
-        padding: 2rem 6rem;
-        font-family: $playfair;
+    &-lines {
+      margin-top: 1rem;
+      cursor: pointer;
 
-        a {
-            text-decoration: none;
-            color: $grey-white-color;
-        }
+      .line {
+        display: block;
+        max-width: 2.6rem;
+        height: 0.2rem;
+        border-radius: 2rem;
+        background-color: $cappuccino-color;
+        margin-bottom: 0.6rem;
+        transition: all 0.5s ease;
+      }
 
-        @include breakpoint(medium) {
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%);
+      &.is-active .line-1 {
+        transform: translateY(0.4rem) rotate(-220deg);
+      }
 
-            a {
-                text-decoration: none;
-                color: $grey-white-color;
-            }
-        }
+      &.is-active .line-2 {
+        transform: translateY(-0.4rem) rotate(220deg);
+      }
     }
 
-    &__toggle {
-        width: 3rem;
-        height: 3rem;
-        position: fixed;
-        top: 0;
-        right: 0;
-        margin-top: 2rem;
-        margin-right: 2rem;
-        z-index: 1;
+    @include breakpoint(medium) {
+      display: none;
+    }
+  }
 
-        @include breakpoint(small) {
-            margin-right: 4rem;
-        }
-
-        &-lines {
-            margin-top: 1rem;
-            cursor: pointer;
-
-
-            .line {
-                display: block;
-                max-width: 2.6rem;
-                height: .2rem;
-                border-radius: 2rem;
-                background-color: $cappuccino-color;
-                margin-bottom: .6rem;
-                transition: all .5s ease;
-            }
-
-            &.is-active .line-1 {
-                transform: translateY(.4rem) rotate(-220deg);
-            }
-
-            &.is-active .line-2 {
-                transform: translateY(-.4rem) rotate(220deg);
-            }
-        }
-
-        @include breakpoint(medium) {
-            display: none;
-        }
+  &__icons {
+    &-social {
+      color: $grey-white-color;
+      font-size: 2rem;
+      padding: 0 0;
+      opacity: 1;
     }
 
-    &__icons {
-        &-social {
-            color: $grey-white-color;
-            font-size: 2rem;
-            padding: 0 1rem;
-            opacity: 1;
-        }
-
-        &.open-social {
-            &-social {
-                opacity: 0;
-            }
-        }
-    }
-
-    &__links {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        text-align: center;
-        height: 100vh;
-        width: 100%;
-        list-style: none;
-        background-color: $black-color;
-        position: fixed;
+    &.open-social {
+      &-social {
         opacity: 0;
-        z-index: -1;
-        transition: all .3s ease-in-out;
+      }
+    }
+  }
 
-        a {
-            color: $grey-white-color;
-            text-decoration: none;
-            font-size: 1.6rem;
-            opacity: 0;
-            transition: all .5s ease-in-out;
-            cursor: pointer;
+  &__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    list-style: none;
+    background-color: $black-color;
+    position: fixed;
+    opacity: 0;
+    z-index: -1;
+    transition: step-end 0.5s ease-in-out;
 
-            &:hover {
-                color: $grey-white-color;
-            }
-        }
+    a {
+      color: $grey-white-color;
+      text-decoration: none;
+      font-size: 1.6rem;
+      opacity: 0;
+      transition: step-end 0.5s ease-in-out;
+      cursor: pointer;
 
-        &.open {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            text-align: center;
-            z-index: 1;
-            visibility: visible;
-            opacity: 1;
-
-            a {
-                opacity: 1;
-                transition: all .5s ease-in-out;
-            }
-        }
+      &:hover {
+        color: $grey-white-color;
+      }
     }
 
-    @include breakpoint(medium) {
-        &__links {
-            display: flex;
-            flex-direction: row;
-            justify-content: start;
-            position: initial;
-            height: 100%;
-            z-index: 1;
-            opacity: 1;
-            padding: 3rem 4rem;
-            transition: none;
-            background-color: transparent;
+    &.open {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      text-align: center;
+      z-index: 1;
+      visibility: visible;
+      opacity: 1;
 
-
-            a {
-                opacity: 1;
-                padding: 0 1.5rem;
-                transition: none;
-                color: $grey-color;
-            }
-        }
-
-        &__icons,
-        &-social {
-            position: absolute;
-            right: 5%;
-            transform: translate(-5%);
-            color: $black-color;
-        }
+      a {
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+      }
     }
+  }
+
+  @include breakpoint(medium) {
+    &__links {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      position: initial;
+      height: 100%;
+      z-index: 1;
+      opacity: 1;
+      padding: 3rem 4rem;
+      transition: none;
+      background-color: transparent;
+
+      a {
+        opacity: 1;
+        padding: 0 1.5rem;
+        transition: none;
+        color: $grey-white-color;
+        transition: step-end .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+        &:hover {
+          color: $green-color;
+        }
+      }
+    }
+
+    &__icons,
+    &-social {
+      position: absolute;
+      right: 5%;
+      transform: translate(-5%);
+      color: $black-color;
+    }
+  }
 }
