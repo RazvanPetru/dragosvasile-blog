@@ -1,0 +1,16 @@
+<%-include('partials/header') %>
+
+<article class="post">
+    <div class="post__container">
+        <div class="post__container-date date">March 20 2020</div>
+        <div class="post__container-title"><%= title %></div>
+        <div class="post__container-description"><%= content %></div>
+    </div>
+</article>
+
+<section class="section__post">
+    <button class="section__post-btn" id="previews"><i class="fas fa-arrow-left"></i> Previews</button>
+    <button class="section__post-btn" id="next"> Next <i class="fas fa-arrow-right"></i></button>
+</section>
+
+<%-include('partials/footer') %>

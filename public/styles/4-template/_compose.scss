@@ -1,0 +1,52 @@
+.compose {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+
+
+    &-item {
+        color: $grey-white-color;
+        padding: 1rem 1rem;
+        font-family: $second-montserrat;
+    }
+
+    &__item {
+        background-color: transparent;
+        border: 1px solid $brown-color;
+        border-radius: 1rem;
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    &__title {
+        font-size: 1.6rem;
+        padding: .5rem 1rem;
+        color: $white-color;
+    }
+
+    &__text {
+        padding: .5rem 1rem;
+        color: $white-color;
+    }
+
+    &__btn {
+        margin-top: 3rem;
+        padding: .5rem 1rem;
+        background-color: $brown-color;
+        border: 1px solid $black-color;
+        font-size: 1.2rem;
+        transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        &:focus {
+            outline: 0;
+        }
+
+        &:hover {
+            background-color: $grey-white-color;
+        }
+    }
+}
