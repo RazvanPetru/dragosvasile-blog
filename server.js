@@ -23,19 +23,12 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/blog", {
   useUnifiedTopology: true
 });
 
-const postSchema = {
-  title: String,
-  content: String
-};
-
-const Post = mongoose.model("Post", postSchema);
-
+const Post = require('./models/post');
 
 const adminRouter = require("./routes/admin.router");
 const contactRouter = require("./routes/contact.router");
 const aboutRouter = require("./routes/about.router");
 const composeRouter = require("./routes/compose.router");
-
 
 app.use("/admin", adminRouter);
 app.use("/contact", contactRouter);
@@ -63,9 +56,9 @@ app.get("/posts/:postId", function (req, res) {
   Post.findOne({
     _id: requestedPostId
   }, function (err, post) {
-    res.render("post", {
+    res.render("posts", {
       title: post.title,
-      content: post.content,
+      description: post.description,
       moment: moment
     });
   });
