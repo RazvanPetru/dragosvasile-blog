@@ -5,65 +5,71 @@ const bodyparser = require("body-parser");
 const ejs = require("ejs");
 const _ = require("lodash");
 const moment = require("moment");
+const adminBro = require("admin-bro");
+const expressSession = require("express-session");
+const mongoose = require("mongoose");
+
 
 const app = express();
 
-app.use(
-  bodyparser.urlencoded({
-    extended: true
-  })
-);
+app.use(bodyparser.json());
 
 app.set("view engine", "ejs");
 
 app.use("/public", express.static(__dirname + "/public"));
 
-let posts = [];
-
-app.get("/", (req, res) => {
-  res.render("blog", {
-    posts: posts,
-    moment: moment
-  });
+mongoose.connect("mongodb://localhost:27017/blog", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 });
 
-app.get("/about", (req, res) => {
-  res.render("about");
+const postSchema = {
+  title: String,
+  content: String
+};
+
+const Post = mongoose.model("Post", postSchema);
+
+
+const adminRouter = require("./routes/admin.router");
+const contactRouter = require("./routes/contact.router");
+const aboutRouter = require("./routes/about.router");
+const composeRouter = require("./routes/compose.router");
+
+
+app.use("/admin", adminRouter);
+app.use("/contact", contactRouter);
+app.use("/about", aboutRouter);
+app.use("/compose", composeRouter);
+
+app.get("/", (req, res) => {
+  Post.find({}, function (err, posts) {
+    res.render("blog", {
+      posts: posts,
+      moment: moment
+    });
+  });
 });
 
 app.get("/contact", (req, res) => {
   res.render("contact");
 });
 
-app.get("/compose", (req, res) => {
-  res.render("compose");
-});
 
-app.post("/compose", (req, res) => {
-  const post = {
-    title: req.body.postTitle,
-    content: req.body.postBody
-  };
+app.get("/posts/:postId", function (req, res) {
 
-  posts.push(post);
+  const requestedPostId = req.params.postId;
 
-  res.redirect("/");
-});
-
-app.get("/posts/:postName", (req, res) => {
-  const requestedTitle = _.lowerCase(req.params.postName);
-
-  posts.forEach(post => {
-    const storedTitle = _.lowerCase(post.title);
-
-    if (storedTitle === requestedTitle) {
-      res.render("posts", {
-        title: post.title,
-        content: post.content,
-        moment: moment
-      });
-    }
+  Post.findOne({
+    _id: requestedPostId
+  }, function (err, post) {
+    res.render("post", {
+      title: post.title,
+      content: post.content,
+      moment: moment
+    });
   });
+
 });
 
 const port = process.env.PORT || 3000;
