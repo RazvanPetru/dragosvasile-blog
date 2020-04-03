@@ -1,9 +1,14 @@
 .article {
-    margin-top: 10rem;
     display: grid;
     grid-gap: unset;
-    padding: 4rem 8rem;
+    margin: 0 auto;
+    margin-top: 10rem;
+    padding: 4rem 4rem;
     grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+
+    @include breakpoint(medium) {
+        padding: 4rem 10rem;
+    }
 
     a {
         text-decoration: none;
