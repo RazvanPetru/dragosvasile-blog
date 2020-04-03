@@ -1,37 +1,43 @@
 .article {
-    display: inline-grid;
-    grid-template-columns: repeat(auto-fill, 30rem);
     margin-top: 10rem;
-    grid-gap: 10rem;
-    justify-content: center;
-    min-height: 100%;
-    width: 100%;
+    display: grid;
+    grid-gap: unset;
+    padding: 4rem 8rem;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
 
-
-    @include breakpoint(medium) {
-        display: inline-grid;
-        grid-template-rows: repeat(auto-fill, auto);
-        grid-template-columns: repeat(auto-fill, auto);
-        justify-items: center;
+    a {
+        text-decoration: none;
     }
-
 
     &__container {
         display: flex;
         flex-direction: column;
+        justify-content: space-evenly;
         padding: 1rem 0;
+        background-color: $black-color;
+        border: 1px solid $grey-color;
+        cursor: pointer;
+        height: 30rem;
+        position: relative;
+
+        &:hover {
+            background-color: $white-color;
+            transition: .4s;
+            transform: translateY(-1rem);
+            position: relative;
+        }
     }
 
     &__date {
-        text-align: center;
         font-size: 1.4rem;
-        color: $green-color;
+        color: $main-color;
+        text-align: center;
     }
 
     &__title {
         padding-top: 1rem;
         padding-bottom: 1rem;
-        font-size: 3rem;
+        font-size: 2.5rem;
         text-align: center;
         font-family: $playfair;
         letter-spacing: .2rem;
@@ -39,40 +45,50 @@
 
         a {
             text-decoration: none;
-            color: $cappuccino-color;
+            color: $grey-white-color;
         }
     }
 
     &__description {
-        color: $grey-white-color;
+        padding-top: 1rem;
+        color: $grey-color;
         text-align: center;
     }
 
     &__button {
-        text-align: center;
+        display: flex;
         padding-bottom: 1rem;
         padding-top: 1rem;
+        align-items: flex-end;
+        justify-content: end;
+        height: 100%;
+        transition: all .3s ease-in-out;
 
         #read-more {
+            margin-left: 1rem;
             padding: .2rem .5rem;
+            text-transform: uppercase;
             background-color: transparent;
             border: none;
-            border-bottom: 1px solid $green-color;
-            color: $green-color;
+            color: $main-color;
             cursor: pointer;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             font-family: $second-montserrat;
             transition: all .2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
             &:focus {
                 outline: 0;
             }
-
-            &:hover {
-                background-color: $green-color;
-                color: $white-color;
-            }
         }
+    }
+
+    &__container:hover .article__button {
+        transform: translateX(1rem);
+        transition: all .3s ease-in-out;
+    }
+
+    &__container:hover .article__title a {
+        color: $main-color;
     }
 }

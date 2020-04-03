@@ -1,30 +1,16 @@
 .nav {
   display: flex;
-
-  @include breakpoint(medium) {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: start;
-  }
+  justify-content: center;
 
   #logo {
     padding: 2rem 6rem;
     font-family: $playfair;
+    font-size: 3rem;
+    letter-spacing: .2rem;
 
     a {
       text-decoration: none;
-      color: $grey-white-color;
-    }
-
-    @include breakpoint(medium) {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-
-      a {
-        text-decoration: none;
-        color: $grey-white-color;
-      }
+      color: $white-color;
     }
   }
 
@@ -51,7 +37,7 @@
         max-width: 2.6rem;
         height: 0.2rem;
         border-radius: 2rem;
-        background-color: $cappuccino-color;
+        background-color: $main-color;
         margin-bottom: 0.6rem;
         transition: all 0.5s ease;
       }
@@ -64,17 +50,13 @@
         transform: translateY(-0.4rem) rotate(220deg);
       }
     }
-
-    @include breakpoint(medium) {
-      display: none;
-    }
   }
 
   &__icons {
     &-social {
       color: $grey-white-color;
-      font-size: 2rem;
-      padding: 0 0;
+      font-size: 1.6rem;
+      padding: 1rem 1rem;
       opacity: 1;
     }
 
@@ -95,9 +77,9 @@
     list-style: none;
     background-color: $black-color;
     position: fixed;
-    opacity: 0;
+    top: -200%;
     z-index: -1;
-    transition: step-end 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
 
     a {
       color: $grey-white-color;
@@ -108,7 +90,7 @@
       cursor: pointer;
 
       &:hover {
-        color: $grey-white-color;
+        color: $brown-color;
       }
     }
 
@@ -120,46 +102,39 @@
       z-index: 1;
       visibility: visible;
       opacity: 1;
+      right: 0;
+      top: 0;
 
       a {
         opacity: 1;
         transition: all 0.5s ease-in-out;
       }
     }
+
+    @include breakpoint(medium) {
+      width: 30%;
+      right: 0;
+    }
   }
+}
+
+.nav__iconsSocial {
+  position: absolute;
+  left: 0;
+  margin: 2rem 10rem;
+  display: none;
 
   @include breakpoint(medium) {
-    &__links {
-      display: flex;
-      flex-direction: row;
-      justify-content: start;
-      position: initial;
-      height: 100%;
-      z-index: 1;
-      opacity: 1;
-      padding: 3rem 4rem;
-      transition: none;
-      background-color: transparent;
+    display: initial;
 
-      a {
-        opacity: 1;
-        padding: 0 1.5rem;
-        transition: none;
-        color: $grey-white-color;
-        transition: step-end .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    .nav__icons-social {
+      font-size: 2rem;
 
-        &:hover {
-          color: $green-color;
-        }
+      &:hover {
+        color: $black-color;
+        background-color: $white-color;
+        border-radius: 50%;
       }
-    }
-
-    &__icons,
-    &-social {
-      position: absolute;
-      right: 5%;
-      transform: translate(-5%);
-      color: $black-color;
     }
   }
 }

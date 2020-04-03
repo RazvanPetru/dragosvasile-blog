@@ -1,5 +1,6 @@
 const {
-    model
+    model,
+    mongoose
 } = require('mongoose');
 
 const Post = model('Post', {

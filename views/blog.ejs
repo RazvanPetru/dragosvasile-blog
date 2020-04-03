@@ -1,22 +1,22 @@
 <%-include('partials/header') %>
 
 <article class="article">
-    <% posts.forEach(function(post) {%>
-    <div class="article__container">
-        <div class="article__date">
-            <%= moment().format('MMMM DD YYYY'); %>
-        </div>
-        <div class="article__title">
-            <a href="/posts/<%= post.title %>"><%= post.title%></a>
-        </div>
-        <div class="article__description">
-            <%= post.description.substring(0, 150) + "..."%>
-        </div>
-        <div class="article__button">
-            <a href="/posts/<%= post._id %>" id="read-more">Read More</a>
-        </div>
+  <% posts.forEach(function(post) {%>
+  <div class="article__container">
+    <div class="article__date">
+      <i class="far fa-clock"></i> <%= moment().format('YYYY-DD-MM'); %>
     </div>
-    <% }); %>
+    <div class="article__title">
+      <a href="/posts/<%= post._id %>"><%= post.title%></a>
+    </div>
+    <div class="article__description">
+      <%= post.description.substring(0, 150) + "..."%>
+    </div>
+    <div class="article__button">
+      <a href="/posts/<%= post._id %>" id="read-more">Read More</a>
+    </div>
+  </div>
+  <% }); %>
 </article>
 
 <%-include('partials/newsletter') %> <%-include('partials/footer') %>

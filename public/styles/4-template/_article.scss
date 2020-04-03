@@ -10,14 +10,14 @@
 
         &-date {
             font-size: 1.4rem;
-            color: $green-color;
+            color: $brown-color;
         }
 
         &-title {
             font-size: 4rem;
             padding-top: 2rem;
             font-family: $playfair;
-            color: $cappuccino-color;
+            color: $white-color;
         }
 
         &-description {
@@ -25,7 +25,13 @@
             text-align: center;
             line-height: 3.2rem;
             font-size: 1.6rem;
+            max-width: 100%;
+            margin: 0 auto;
             color: $grey-white-color;
+
+            @include breakpoint(medium) {
+                max-width: 70%;
+            }
         }
     }
 }
@@ -36,7 +42,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 10rem 0;
+    margin-top: 10rem;
+    margin-bottom: 2rem;
 
 
     &-btn {
@@ -45,7 +52,7 @@
         font-family: $playfair;
         border: none;
         background-color: transparent;
-        color: $cappuccino-color;
+        color: $white-color;
 
         @include breakpoint(medium) {
             margin: 10rem;

@@ -1,15 +1,15 @@
 .subscribe {
-    background-color: $green-color;
-    height: 70vh;
-    margin-top: 10rem;
+    background-color: $grey-white-color;
+    position: relative;
+    margin-top: 5rem;
 
     &__container {
-        height: 100%;
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-bottom: 10rem;
 
         &-title {
             font-size: 2.4rem;
@@ -26,6 +26,7 @@
 
         &-signup {
             padding-top: 2rem;
+            display: flex;
 
             #email {
                 background-color: transparent;
@@ -33,7 +34,7 @@
                 padding: .8rem .5rem;
                 font-size: 1.6rem;
                 border-radius: 0;
-                color: $white-color;
+                color: $black-color;
 
                 &:focus {
                     outline: 0;
@@ -41,11 +42,11 @@
             }
 
             #email::placeholder {
-                color: $white-color;
+                color: $brown-color;
             }
 
             #email:-moz-placeholder {
-                color: $white-color;
+                color: $brown-color;
             }
 
             #button {
@@ -53,10 +54,15 @@
                 border: 1px solid $black-color;
                 font-size: 1.4rem;
                 padding: .9rem 1rem;
-                color: $white-color;
+                color: $brown-color;
 
                 &:focus {
                     outline: 0;
+                }
+
+                &:hover {
+                    color: $white-color;
+                    background-color: $brown-color;
                 }
             }
         }
