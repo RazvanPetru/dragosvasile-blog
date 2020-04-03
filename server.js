@@ -18,7 +18,7 @@ app.set("view engine", "ejs");
 
 app.use("/public", express.static(__dirname + "/public"));
 
-mongoose.connect("mongodb://localhost:27017/blog", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/blog", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
