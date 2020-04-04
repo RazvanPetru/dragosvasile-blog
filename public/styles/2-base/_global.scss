@@ -7,6 +7,8 @@
 }
 
 html {
+    position: relative;
+    min-height: 100%;
     font-size: 62.5%;
 
     @include breakpoint(medium) {
@@ -24,6 +26,6 @@ body {
     scroll-behavior: smooth;
     font-family: $playfair;
     font-weight: 400;
-    height: 100vh;
     width: 100%;
+    height: 100vh;
 }

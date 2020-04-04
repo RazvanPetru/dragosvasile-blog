@@ -3,11 +3,12 @@
     grid-gap: unset;
     margin: 0 auto;
     margin-top: 10rem;
-    padding: 4rem 6rem;
+    padding: 4rem 4rem;
     grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
 
     @include breakpoint(medium) {
         padding: 4rem 10rem;
+        width: 100%;
     }
 
     a {

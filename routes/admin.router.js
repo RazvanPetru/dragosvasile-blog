@@ -23,25 +23,8 @@ const adminBro = new AdminBro({
         },
       },
     },
-    resource: About,
-    options: {
-      parent: {
-        name: "About Me",
-      },
-      listProperties: ['content'],
-      properties: {
-        content: {
-          isVisible: {
-            list: true,
-            filter: true,
-            show: true,
-            edit: true
-          },
-          type: "textarea",
-        },
-      },
-    },
-  }, ],
+
+  }],
   rootPath: "/admin",
   branding: {
     companyName: "Dragos Vasile",

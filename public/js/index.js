@@ -1,6 +1,7 @@
 const hamburger = document.querySelector(".nav__toggle-lines");
 const links = document.querySelector(".nav__links");
 const social = document.querySelector("nav__icons-social");
+const items = document.querySelector('li');
 
 const d = new Date();
 

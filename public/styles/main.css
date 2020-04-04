@@ -8,6 +8,8 @@
 }
 
 html {
+  position: relative;
+  min-height: 100%;
   font-size: 62.5%;
 }
 
@@ -29,8 +31,8 @@ body {
   scroll-behavior: smooth;
   font-family: "Playfair Display", serif;
   font-weight: 400;
-  height: 100vh;
   width: 100%;
+  height: 100vh;
 }
 
 .nav {
@@ -210,7 +212,7 @@ body {
   grid-gap: unset;
   margin: 0 auto;
   margin-top: 10rem;
-  padding: 4rem 6rem;
+  padding: 4rem 4rem;
   -ms-grid-columns: (minmax(30rem, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
 }
@@ -218,6 +220,7 @@ body {
 @media screen and (min-width: 899px) {
   .article {
     padding: 4rem 10rem;
+    width: 100%;
   }
 }
 
@@ -332,8 +335,7 @@ body {
 }
 
 .subscribe {
-  position: relative;
-  margin-top: 5rem;
+  margin-top: 10rem;
 }
 
 .subscribe__container {
@@ -431,11 +433,7 @@ body {
 
 .footer {
   width: 100%;
-  position: relative;
-  height: 20vh;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+  padding-top: 6rem;
 }
 
 .footer__container {
@@ -448,7 +446,7 @@ body {
           flex-direction: column;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: flex-end;
+          justify-content: end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
