@@ -7,16 +7,15 @@ const richText = require("rich-text");
 AdminBro.registerAdapter(AdminBroMongoose);
 
 const Post = require("../models/post");
-const About = require('../models/about');
 
 const adminBro = new AdminBro({
   databases: [mongoose],
   resources: [{
     resource: Post,
-    About,
     options: {
       parent: {
-        name: "Blog Post"
+        name: "Blog",
+        icon: "fas fa-cogs",
       },
       properties: {
         description: {
@@ -24,7 +23,7 @@ const adminBro = new AdminBro({
         },
       },
     },
-  }],
+  }, ],
   rootPath: "/admin",
   branding: {
     companyName: "Dragos Vasile",

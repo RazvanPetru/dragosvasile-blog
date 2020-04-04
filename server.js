@@ -30,7 +30,7 @@ const adminRouter = require("./routes/admin.router");
 const contactRouter = require("./routes/contact.router");
 const aboutRouter = require("./routes/about.router");
 
-app.use('/admin', adminRouter);
+app.use("/admin", adminRouter);
 app.use(contactRouter);
 app.use(aboutRouter);
 

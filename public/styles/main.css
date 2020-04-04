@@ -8,8 +8,6 @@
 }
 
 html {
-  position: relative;
-  min-height: 100%;
   font-size: 62.5%;
 }
 
@@ -451,8 +449,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
 }
 
 .footer__container-social .footer-social {
