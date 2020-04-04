@@ -2,17 +2,15 @@ const AdminBro = require("admin-bro");
 const AdminBroExpress = require("admin-bro-expressjs");
 const AdminBroMongoose = require("admin-bro-mongoose");
 const mongoose = require("mongoose");
-const theme = require("admin-bro-theme-dark");
 
 AdminBro.registerAdapter(AdminBroMongoose);
 
-const Post = require("../models/post");
 const About = require("../models/about");
+const Post = require("../models/post");
 
 const adminBro = new AdminBro({
   databases: [mongoose],
-  resources: [
-    {
+  resources: [{
       resource: Post,
       options: {
         parent: {
@@ -52,8 +50,7 @@ const ADMIN = {
 
 const router = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
   cookieName: process.env.ADMIN_COOKIE_NAME || "admin-bro",
-  cookiePassword:
-    process.env.ADMIN_COOKIE_PASSWORD ||
+  cookiePassword: process.env.ADMIN_COOKIE_PASSWORD ||
     "supersecret-and-long-password-for-a-cookie-in-the-browser",
   authenticate: async (email, password) => {
     if (email == ADMIN.email && password === ADMIN.password) {
