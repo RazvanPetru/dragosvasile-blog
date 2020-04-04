@@ -13,9 +13,10 @@ const adminBro = new AdminBro({
   databases: [mongoose],
   resources: [{
     resource: Post,
+    About,
     options: {
       parent: {
-        name: "Blog Post",
+        name: "Blog Post"
       },
       properties: {
         description: {
@@ -23,7 +24,6 @@ const adminBro = new AdminBro({
         },
       },
     },
-
   }],
   rootPath: "/admin",
   branding: {
