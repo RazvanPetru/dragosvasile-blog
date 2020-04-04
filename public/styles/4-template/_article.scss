@@ -1,7 +1,7 @@
 .post {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     margin-top: 10rem;
 
@@ -10,7 +10,7 @@
 
         &-date {
             font-size: 1.4rem;
-            color: $brown-color;
+            color: $red-color;
         }
 
         &-title {
@@ -21,9 +21,9 @@
         }
 
         &-description {
-            padding-top: 3rem;
-            text-align: center;
-            line-height: 3.2rem;
+            padding-top: 4rem;
+            text-align: start;
+            line-height: 4rem;
             font-size: 1.6rem;
             max-width: 100%;
             margin: 0 auto;
@@ -31,6 +31,7 @@
 
             @include breakpoint(medium) {
                 max-width: 70%;
+                text-align: center;
             }
         }
     }

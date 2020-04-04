@@ -1,6 +1,9 @@
 .nav {
   display: flex;
-  justify-content: center;
+
+  @include breakpoint(medium) {
+    justify-content: center;
+  }
 
   #logo {
     padding: 2rem 6rem;
@@ -10,7 +13,8 @@
 
     a {
       text-decoration: none;
-      color: $white-color;
+      color: #eb2c4d;
+      font-weight: 300;
     }
   }
 
@@ -37,7 +41,7 @@
         max-width: 2.6rem;
         height: 0.2rem;
         border-radius: 2rem;
-        background-color: $main-color;
+        background-color: $white-color;
         margin-bottom: 0.6rem;
         transition: all 0.5s ease;
       }
@@ -54,7 +58,7 @@
 
   &__icons {
     &-social {
-      color: $grey-white-color;
+      color: $white-color;
       font-size: 2.2rem;
       padding: 1rem 1rem;
       opacity: 1;
@@ -71,7 +75,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    text-align: center;
     height: 100vh;
     width: 100%;
     list-style: none;
@@ -80,6 +83,8 @@
     top: -200%;
     z-index: -1;
     transition: all 0.2s ease-in-out;
+    border: 1px solid $grey-color;
+    border-top: none;
 
     a {
       color: $grey-white-color;
@@ -102,7 +107,6 @@
       z-index: 1;
       visibility: visible;
       opacity: 1;
-      right: 0;
       top: 0;
 
       a {

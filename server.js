@@ -23,6 +23,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/blog", {
   useUnifiedTopology: true,
 });
 
+const About = require('./models/about');
 const Post = require("./models/post");
 
 const adminRouter = require("./routes/admin.router");
