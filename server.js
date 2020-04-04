@@ -8,7 +8,6 @@ const moment = require("moment");
 const adminBro = require("admin-bro");
 const expressSession = require("express-session");
 const mongoose = require("mongoose");
-const richText = require("rich-text");
 
 const app = express();
 
