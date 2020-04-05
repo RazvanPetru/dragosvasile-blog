@@ -2,7 +2,8 @@
 
 <article class="post">
     <div class="post__container">
-        <div class="post__container-date date"><i class="far fa-clock"></i> <%= moment().format('YYYY-DD-MM'); %>
+        <div class="post__container-date date">
+            <i class="far fa-clock"></i> <%= date %>
         </div>
         <div class="post__container-title"><%= title %></div>
         <div class="post__container-description"><%= description %></div>
@@ -10,8 +11,12 @@
 </article>
 
 <section class="section__post">
-    <button class="section__post-btn" id="previews"><i class="fas fa-arrow-left"></i> Previews</button>
-    <button class="section__post-btn" id="next"> Next <i class="fas fa-arrow-right"></i></button>
+    <button class="section__post-btn" id="previous">
+        <i class="fas fa-arrow-left"></i> Previous
+    </button>
+    <button class="section__post-btn" id="next">
+        Next <i class="fas fa-arrow-right"></i>
+    </button>
 </section>
 
 <%-include('partials/footer') %>

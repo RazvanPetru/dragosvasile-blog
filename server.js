@@ -24,6 +24,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/blog", {
 
 const Post = require("./models/post");
 const About = require('./models/about');
+const Contact = require("./models/contact");
 
 const adminRouter = require("./routes/admin.router");
 const contactRouter = require("./routes/contact.router");
@@ -50,6 +51,7 @@ app.get("/posts/:postId", function (req, res) {
     },
     function (err, post) {
       res.render("posts", {
+        date: post.date,
         title: post.title,
         description: post.description,
         moment: moment,

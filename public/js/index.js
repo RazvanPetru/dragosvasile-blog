@@ -21,17 +21,3 @@ for (let i = 0; i < items.length; i++) {
 }
 
 const date = (document.getElementById("date").innerHTML = d.getFullYear());
-
-
-window.onscroll = function () {
-  scroll()
-};
-
-function scroll() {
-  if (document.body.scrollTop > 20 ||
-    document.documentElement.scrollTop > 20) {
-    hamburger.style.top = "0";
-  } else {
-    hamburger.style.top = "-60px";
-  }
-}

@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 
 AdminBro.registerAdapter(AdminBroMongoose);
 
+const Contact = require("../models/contact");
 const About = require("../models/about");
 const Post = require("../models/post");
 
@@ -28,6 +29,19 @@ const adminBro = new AdminBro({
       options: {
         parent: {
           name: "About",
+        },
+        properties: {
+          content: {
+            type: "textarea",
+          },
+        },
+      },
+    },
+    {
+      resource: Contact,
+      options: {
+        parent: {
+          name: "Contact",
         },
         properties: {
           content: {

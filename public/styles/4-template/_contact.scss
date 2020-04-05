@@ -1,4 +1,20 @@
 .content {
-    flex: 1 0 auto;
-    height: 100%;
+    display: flex;
+    padding: 2rem 2rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10rem;
+    min-height: 100%;
+
+    @include breakpoint(medium) {
+        width: 60%;
+    }
+}
+
+.contact {
+    padding: 1rem 1rem;
+    font-size: 2rem;
+    text-align: left;
+    line-height: 3.8rem;
+    color: $grey-white-color;
 }

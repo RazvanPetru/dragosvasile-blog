@@ -4,7 +4,7 @@
   <% posts.forEach(function(post) {%>
   <div class="article__container">
     <div class="article__date">
-      <i class="far fa-clock"></i> <%= moment().format('YYYY-DD-MM'); %>
+      <i class="far fa-clock"></i> <%= post.date %>
     </div>
     <div class="article__title">
       <a href="/posts/<%= post._id %>"><%= post.title%></a>
