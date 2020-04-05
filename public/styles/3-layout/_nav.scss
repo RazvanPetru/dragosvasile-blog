@@ -6,12 +6,13 @@
   }
 
   #logo {
-    padding: 2rem 6rem;
+    padding: 1rem 6rem;
     font-family: $playfair;
-    font-size: 3rem;
-    letter-spacing: .2rem;
+    font-size: 3.5rem;
+    letter-spacing: .3rem;
 
     a {
+      text-transform: uppercase;
       text-decoration: none;
       color: #eb2c4d;
       font-weight: 300;
@@ -95,7 +96,8 @@
     a {
       color: $grey-white-color;
       text-decoration: none;
-      font-size: 2rem;
+      text-transform: uppercase;
+      font-size: 1.8rem;
       opacity: 0;
       transition: step-end 0.5s ease-in-out;
       cursor: pointer;

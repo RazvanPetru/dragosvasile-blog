@@ -48,13 +48,14 @@ body {
 }
 
 .nav #logo {
-  padding: 2rem 6rem;
+  padding: 1rem 6rem;
   font-family: "Playfair Display", serif;
-  font-size: 3rem;
-  letter-spacing: .2rem;
+  font-size: 3.5rem;
+  letter-spacing: .3rem;
 }
 
 .nav #logo a {
+  text-transform: uppercase;
   text-decoration: none;
   color: #eb2c4d;
   font-weight: 300;
@@ -147,7 +148,8 @@ body {
 .nav__links a {
   color: #cfcfcf;
   text-decoration: none;
-  font-size: 2rem;
+  text-transform: uppercase;
+  font-size: 1.8rem;
   opacity: 0;
   -webkit-transition: step-end 0.5s ease-in-out;
   transition: step-end 0.5s ease-in-out;
@@ -338,6 +340,30 @@ body {
   color: #1f2125;
 }
 
+.scroll {
+  display: none;
+}
+
+@media screen and (min-width: 899px) {
+  .scroll {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    padding-bottom: 1rem;
+    color: #cfcfcf;
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+  .scroll__arrow {
+    padding-right: .5rem;
+    font-size: 1.2rem;
+    color: #fbfdfc;
+  }
+}
+
 .subscribe {
   margin-top: 10rem;
 }
@@ -437,7 +463,9 @@ body {
 
 .footer {
   width: 100%;
-  padding-top: 6rem;
+  padding-top: 3rem;
+  background-color: #eb2c4d;
+  border: 1px solid #1f2125;
 }
 
 .footer__container {
@@ -448,9 +476,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -461,6 +486,10 @@ body {
   color: #cfcfcf;
   font-size: 2rem;
   padding: 0 1rem;
+}
+
+.footer__container-social .footer-social:hover {
+  color: #1f2125;
 }
 
 .footer__container-creator {
