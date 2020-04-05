@@ -50,8 +50,14 @@ body {
 .nav #logo {
   padding: 1rem 6rem;
   font-family: "Playfair Display", serif;
-  font-size: 3.5rem;
+  font-size: 3rem;
   letter-spacing: .3rem;
+}
+
+@media screen and (min-width: 899px) {
+  .nav #logo {
+    font-size: 3.5rem;
+  }
 }
 
 .nav #logo a {
@@ -219,6 +225,7 @@ body {
   margin: 0 auto;
   margin-top: 10rem;
   padding: 4rem 4rem;
+  min-height: 100%;
   -ms-grid-columns: (minmax(30rem, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
 }
@@ -514,6 +521,7 @@ body {
           flex-direction: column;
   width: 80%;
   margin: 0 auto;
+  min-height: 100%;
   margin-top: 10rem;
 }
 

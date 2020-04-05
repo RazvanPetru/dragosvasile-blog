@@ -4,6 +4,7 @@
     margin: 0 auto;
     margin-top: 10rem;
     padding: 4rem 4rem;
+    min-height: 100%;
     grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
 
     @include breakpoint(medium) {

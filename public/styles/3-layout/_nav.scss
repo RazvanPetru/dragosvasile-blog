@@ -8,8 +8,12 @@
   #logo {
     padding: 1rem 6rem;
     font-family: $playfair;
-    font-size: 3.5rem;
+    font-size: 3rem;
     letter-spacing: .3rem;
+
+    @include breakpoint(medium) {
+      font-size: 3.5rem;
+    }
 
     a {
       text-transform: uppercase;
