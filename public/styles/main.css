@@ -155,7 +155,7 @@ body {
   color: #cfcfcf;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1.8rem;
+  font-size: 2rem;
   opacity: 0;
   -webkit-transition: step-end 0.5s ease-in-out;
   transition: step-end 0.5s ease-in-out;
@@ -164,6 +164,24 @@ body {
 
 .nav__links a:hover {
   color: #eb2c4d;
+}
+
+.nav__links ul {
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
 }
 
 .nav__links.open {
@@ -400,6 +418,7 @@ body {
   letter-spacing: .1rem;
   line-height: 4rem;
   color: #eb2c4d;
+  font-weight: 600;
 }
 
 .subscribe__container-description {
@@ -457,6 +476,7 @@ body {
   cursor: pointer;
   -webkit-transition: all .1s ease-in-out;
   transition: all .1s ease-in-out;
+  font-weight: 500;
 }
 
 .subscribe__container-signup #button:focus {
@@ -504,11 +524,12 @@ body {
   font-family: "Montserrat", sans-serif;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
-  color: #cfcfcf;
+  color: #fbfdfc;
+  font-weight: 500;
 }
 
 .footer__container-creator #name {
-  color: #cfcfcf;
+  color: #fbfdfc;
 }
 
 .post {

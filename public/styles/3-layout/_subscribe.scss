@@ -16,6 +16,7 @@
             letter-spacing: .1rem;
             line-height: 4rem;
             color: $red-color;
+            font-weight: 600;
         }
 
         &-description {
@@ -57,6 +58,7 @@
                 color: $red-color;
                 cursor: pointer;
                 transition: all .1s ease-in-out;
+                font-weight: 500;
 
                 &:focus {
                     outline: 0;

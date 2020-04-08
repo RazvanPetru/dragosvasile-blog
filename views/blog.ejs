@@ -7,13 +7,13 @@
       <i class="far fa-clock"></i> <%= post.date %>
     </div>
     <div class="article__title">
-      <a href="/posts/<%= post._id %>"><%= post.title%></a>
+      <a name="postTitle" href="/posts/<%= post._id %>"><%= post.title%></a>
     </div>
     <div class="article__description">
       <%= post.description.substring(0, 150) + "..."%>
     </div>
     <div class="article__button">
-      <a href="/posts/<%= post._id %>" id="read-more">Read More</a>
+      <a name="postBtn" href="/posts/<%= post._id %>" id="read-more">Read More</a>
     </div>
   </div>
   <% }); %>
