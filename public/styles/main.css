@@ -94,7 +94,8 @@ body {
 }
 
 .nav #logo {
-  margin: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   padding: 0 6rem;
   font-family: "Libre Baskerville", serif;
   font-size: 2.5rem;
@@ -104,6 +105,7 @@ body {
 @media screen and (min-width: 899px) {
   .nav #logo {
     font-size: 2.5rem;
+    margin-left: 1.5rem;
   }
 }
 
@@ -422,7 +424,7 @@ body {
 
 a.back__btn {
   position: absolute;
-  left: 10%;
+  left: 15%;
   top: 20%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
