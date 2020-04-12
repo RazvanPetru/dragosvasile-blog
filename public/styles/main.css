@@ -94,9 +94,8 @@ body {
 }
 
 .nav #logo {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  padding: 0 6rem;
+  margin: 2rem 0;
+  padding: 0 2rem;
   font-family: "Libre Baskerville", serif;
   font-size: 2.5rem;
   letter-spacing: .1rem;
@@ -105,7 +104,7 @@ body {
 @media screen and (min-width: 899px) {
   .nav #logo {
     font-size: 2.5rem;
-    margin-left: 1.5rem;
+    padding-left: 6rem;
   }
 }
 
@@ -195,7 +194,6 @@ body {
   display: grid;
   grid-gap: 5rem;
   margin: 0 auto;
-  margin-top: 5rem;
   padding: 4rem 4rem;
 }
 
@@ -238,7 +236,7 @@ body {
 
 .article__title {
   padding-top: 1rem;
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   font-family: "Playfair Display", serif;
   letter-spacing: .1rem;
   cursor: pointer;
@@ -382,15 +380,16 @@ body {
   width: 80%;
   margin: 0 auto;
   min-height: 100%;
-  margin-top: 10rem;
+  margin-top: 2rem;
 }
 
 .post__container {
-  text-align: center;
   margin-top: 3rem;
+  text-align: center;
 }
 
 .post__container-date {
+  padding-top: .5rem;
   font-size: 1.4rem;
   color: #eb2c4d;
 }
@@ -400,8 +399,14 @@ body {
   padding-top: 2rem;
   font-family: "Playfair Display", serif;
   color: #1f2125;
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 899px) {
+  .post__container-title {
+    width: 70%;
+  }
 }
 
 .post__container-description {
@@ -423,15 +428,12 @@ body {
 }
 
 a.back__btn {
-  position: absolute;
-  left: 15%;
-  top: 20%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  position: relative;
+  left: -35%;
   border: none;
   font-family: "Playfair Display", serif;
   font-size: 1.6rem;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   cursor: pointer;
   text-decoration: none;
   color: #eb2c4d;

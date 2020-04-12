@@ -4,13 +4,14 @@
     width: 80%;
     margin: 0 auto;
     min-height: 100%;
-    margin-top: 10rem;
+    margin-top: 2rem;
 
     &__container {
-        text-align: center;
         margin-top: 3rem;
+        text-align: center;
 
         &-date {
+            padding-top: .5rem;
             font-size: 1.4rem;
             color: $red-color;
         }
@@ -20,8 +21,12 @@
             padding-top: 2rem;
             font-family: $playfair;
             color: $black-color;
-            width: 70%;
+            width: 100%;
             margin: 0 auto;
+
+            @include breakpoint(medium) {
+                width: 70%;
+            }
         }
 
         &-description {
@@ -42,16 +47,13 @@
     }
 }
 
-
 a.back__btn {
-    position: absolute;
-    left: 15%;
-    top: 20%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    left: -35%;
     border: none;
     font-family: $playfair;
     font-size: 1.6rem;
-    letter-spacing: .2rem;
+    letter-spacing: 0.2rem;
     cursor: pointer;
     text-decoration: none;
     color: $red-color;
