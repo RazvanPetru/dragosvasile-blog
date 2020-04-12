@@ -1,5 +1,5 @@
 const hamburger = document.querySelector(".nav__toggle-lines");
-const links = document.querySelector(".nav__links");
+const links = document.querySelector("ul");
 const social = document.querySelector("nav__icons-social");
 const items = document.querySelector('li');
 
@@ -10,7 +10,6 @@ hamburger.addEventListener("click", () => {
 
   links.classList.toggle("open");
 
-  social.classList.toggle("open-social");
 });
 
 for (let i = 0; i < items.length; i++) {
