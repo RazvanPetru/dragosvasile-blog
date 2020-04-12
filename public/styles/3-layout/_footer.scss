@@ -1,14 +1,15 @@
 .footer {
     width: 100%;
     padding-top: 3rem;
-    background-color: $red-color;
+    margin-top: 5rem;
+    background-color: $black-color;
     border: 1px solid $black-color;
 
     &__container {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        height: 100%;
 
         &-social {
             .footer-social {
@@ -17,7 +18,7 @@
                 padding: 0 1rem;
 
                 &:hover {
-                    color: $black-color;
+                    color: $red-color;
                 }
             }
         }

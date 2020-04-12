@@ -1,15 +1,15 @@
 .article {
     display: grid;
-    grid-gap: unset;
+    grid-gap: 10rem;
     margin: 0 auto;
     margin-top: 10rem;
     padding: 4rem 4rem;
     min-height: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
 
     @include breakpoint(medium) {
         padding: 4rem 10rem;
-        width: 100%;
+        max-width: 80%;
+        grid-gap: 2rem;
     }
 
     a {
@@ -20,53 +20,42 @@
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        padding: 1rem .5rem;
-        background-color: $black-color;
-        box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, .2);
+        padding: 2rem 0;
         margin: .5rem .5rem;
-        cursor: pointer;
-        height: 30rem;
+        height: 100%;
         position: relative;
+        border-bottom: 1px solid $grey-white-color;
+        width: 100%;
 
-        &:hover {
-            background-color: $grey-white-color;
-            transition: .4s;
-            box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, .3);
-            transform: translateY(-1rem);
-            position: relative;
-        }
     }
 
     &__date {
+        padding-top: .5rem;
         font-size: 1.4rem;
         color: #eb2c4d;
-        text-align: center;
     }
 
     &__title {
         padding-top: 1rem;
-        padding-bottom: 1rem;
-        font-size: 2.5rem;
-        text-align: center;
+        font-size: 3.5rem;
         font-family: $playfair;
-        letter-spacing: .2rem;
+        letter-spacing: .1rem;
         cursor: pointer;
 
         a {
             text-decoration: none;
-            color: $grey-white-color;
+            color: $black-color;
         }
     }
 
     &__description {
         padding-top: 1rem;
         color: $grey-color;
-        text-align: center;
+        line-height: 3rem;
     }
 
     &__button {
         display: flex;
-        padding-bottom: 1rem;
         padding-top: 1rem;
         align-items: flex-end;
         justify-content: end;
@@ -74,7 +63,6 @@
         transition: all .3s ease-in-out;
 
         #read-more {
-            margin-left: 1rem;
             padding: .2rem .5rem;
             text-transform: uppercase;
             background-color: transparent;
@@ -85,6 +73,7 @@
             font-size: 1.4rem;
             font-family: $second-montserrat;
             transition: all .2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
 
             &:focus {
                 outline: 0;

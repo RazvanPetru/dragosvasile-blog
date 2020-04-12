@@ -2,21 +2,13 @@
 
 <article class="post">
     <div class="post__container">
+        <a href="/" class="back__btn" name="back"> <i class="fas fa-arrow-left"></i> Go back </a>
+        <div class="post__container-title"><%= title %></div>
         <div class="post__container-date date">
             <i class="far fa-clock"></i> <%= date %>
         </div>
-        <div class="post__container-title"><%= title %></div>
         <div class="post__container-description"><%= description %></div>
     </div>
 </article>
-
-<section class="section__post">
-    <button class="section__post-btn" id="previous">
-        <i class="fas fa-arrow-left"></i> Previous
-    </button>
-    <button class="section__post-btn" id="next">
-        Next <i class="fas fa-arrow-right"></i>
-    </button>
-</section>
 
 <%-include('partials/footer') %>
