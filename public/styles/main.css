@@ -251,7 +251,7 @@ body {
           justify-content: space-evenly;
   padding: 2rem 0;
   margin: .5rem .5rem;
-  height: 25rem;
+  height: 100%;
   position: relative;
   border-bottom: 0.1px solid var(--third-font-color);
   width: 100%;
