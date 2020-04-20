@@ -1,7 +1,7 @@
 .nav {
   position: sticky;
   width: 100%;
-  background-color: $white-color;
+  background-color: var(--bg-color);
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, .1);
   min-height: 6rem;
   display: flex;
@@ -17,18 +17,22 @@
     display: none;
     flex-direction: column;
     margin: 2.5rem;
-    margin-left: 8rem;
+    margin-left: 2rem;
     list-style: none;
+
+    @include breakpoint(medium) {
+      margin-left: 6rem;
+    }
 
     li {
       margin: 1rem 0;
 
       a {
         text-decoration: none;
-        color: $grey-color;
+        color: var(--third-font-color);
 
         &:hover {
-          color: $black-color;
+          color: var(--font-color);
         }
       }
     }
@@ -52,7 +56,7 @@
 
     a {
       text-decoration: none;
-      color: $black-color;
+      color: var(--font-color);
       font-weight: 700;
     }
   }
@@ -76,7 +80,7 @@
         max-width: 2.6rem;
         height: 0.2rem;
         border-radius: 2rem;
-        background-color: $black-color;
+        background-color: var(--font-color);
         margin-bottom: 0.6rem;
         transition: all 0.5s ease;
       }
@@ -93,14 +97,14 @@
 
   &__icons {
     &-social {
-      color: $black-color;
+      color: var(--font-color);
       font-size: 2.2rem;
       padding: 1rem 1rem;
       opacity: 1;
 
       &:hover {
-        background-color: $white-color;
-        color: $black-color;
+        background-color: var(--font-color);
+        color: var(--font-color);
         border-radius: 50%;
       }
     }

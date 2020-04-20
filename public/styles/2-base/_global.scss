@@ -20,7 +20,7 @@ html {
 
 body {
     font-size: 1.6rem;
-    background-color: $white-color;
+    background-color: var(--bg-color);
     scroll-behavior: smooth;
     font-family: $playfair;
     font-weight: 400;

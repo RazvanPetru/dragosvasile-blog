@@ -1,0 +1,52 @@
+.theme {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.theme.show {
+    display: block;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background-color: $grey-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5rem;
+    position: relative;
+    padding: .5rem;
+    height: 2.6rem;
+    width: 5rem;
+}
+
+.ball {
+    background-color: $white-color;
+    position: absolute;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    height: 2.2rem;
+    width: 2.2rem;
+    transition: transform .2s linear;
+}
+
+.checkbox:checked+.label .ball {
+    transform: translateX(2.4rem);
+}
+
+.fa-moon {
+    color: $white-color;
+}
+
+.fa-sun {
+    color: #f39c12;
+}

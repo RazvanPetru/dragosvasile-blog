@@ -2,8 +2,8 @@
     width: 100%;
     padding-top: 3rem;
     margin-top: 5rem;
-    background-color: $black-color;
-    border: 1px solid $black-color;
+    background-color: var(--footer-color);
+    border: 1px solid var(--footer-color);
 
     &__container {
         display: flex;
@@ -28,11 +28,11 @@
             font-family: $second-montserrat;
             padding-top: 1.5rem;
             padding-bottom: 1rem;
-            color: $white-color;
+            color: var(--primary-color);
             font-weight: 500;
 
             #name {
-                color: $white-color;
+                color: var(--primary-color);
             }
         }
     }

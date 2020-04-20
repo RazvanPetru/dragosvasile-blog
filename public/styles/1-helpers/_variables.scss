@@ -11,6 +11,45 @@ $grey-white-color: #cfcfcf;
 $green-color: #4f8179;
 $cappuccino-color: #ae9081;
 
+:root {
+    //blue color
+    --primary-color: #cfcfcf;
+    //purple color
+    --secondary-color: #eb2c4d;
+    // blue matte color
+    --third-color: #de7119;
+    // white color
+    --font-color: #1f2125;
+    // red color
+    --second-font-color: #c51c1c;
+    // grey color
+    --third-font-color: #66676b;
+    // black color
+    --bg-color: #fbfdfc;
+    // footer color
+    --footer-color: #1f2125;
+}
+
+[data-theme='dark'] {
+    //blue color
+    --primary-color: #cfcfcf;
+    //purple color
+    --secondary-color: #eb2c4d;
+    // blue matte color
+    --third-color: #cfcfcf;
+    // white color
+    --font-color: #fbfdfc;
+    // red color
+    --second-font-color: #c51c1c;
+    // grey color
+    --third-font-color: #cfcfcf;
+    // black color
+    --bg-color: #1f2125;
+    // footer color
+    --footer-color: #eb2c4d;
+
+}
+
 
 
 // FONTS

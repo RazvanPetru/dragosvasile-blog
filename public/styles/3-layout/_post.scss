@@ -21,9 +21,9 @@
         justify-content: space-evenly;
         padding: 2rem 0;
         margin: .5rem .5rem;
-        height: 100%;
+        height: 25rem;
         position: relative;
-        border-bottom: 1px solid $grey-white-color;
+        border-bottom: .1px solid var(--third-font-color);
         width: 100%;
     }
 
@@ -42,13 +42,13 @@
 
         a {
             text-decoration: none;
-            color: $black-color;
+            color: var(--font-color);
         }
     }
 
     &__description {
         padding-top: 1rem;
-        color: $grey-color;
+        color: var(--third-font-color);
         line-height: 3rem;
     }
 
@@ -85,30 +85,6 @@
     }
 
     &__container:hover .article__title a {
-        color: $black-color;
+        color: var(--font-color);
     }
-}
-
-.scroll {
-
-    @include breakpoint(medium) {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: rotate(-90deg);
-        padding-bottom: 1rem;
-        color: $grey-white-color;
-        display: block;
-        text-transform: uppercase;
-        font-size: 1.2rem;
-
-
-        &__arrow {
-            padding-right: .5rem;
-            font-size: 1.2rem;
-            color: $white-color;
-        }
-    }
-
-    display: none;
 }
