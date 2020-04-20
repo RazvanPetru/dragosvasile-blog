@@ -3,6 +3,7 @@
     grid-gap: 5rem;
     margin: 0 auto;
     padding: 4rem 4rem;
+    min-height: 100%;
 
     @include breakpoint(medium) {
         padding: 4rem 10rem;
