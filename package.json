@@ -14,7 +14,7 @@
     "express-formidable": "^1.2.0",
     "express-session": "^1.17.0",
     "gsap": "^3.2.6",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "mongodb": "^3.5.5",
